@@ -236,6 +236,14 @@ endfunction
 "过这一限制。这实际上是开始一个新的空命令。例如:  
 "
 "	:map <Space> W|     " Use spacebar to move forward a word
+"   
+" vnoremap vmap 的区别
+" map a b    -> 表示按 a 等于按 b。
+" 
+" vmap    ->  (还有 nmap imap）前首字母表示不同的模式（分别对应虚拟模式，普通模式，插入模式）。
+" 
+" vnoremap c a    -> nore表示非递归 。比如我们之前设置按 a 等于按 b,  假设我们设置按 c 等于按 a 。则我们按下 c 相当于按了 b。如果是 nore 的映射，按下 c 只等于按 a。 至于前面的 v，跟第二条一样表示不同的模式。
+
 
 " Ctrl+c 复制
 vnoremap <C-c> "+y 
