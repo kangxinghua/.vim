@@ -1,9 +1,9 @@
 " =============================================================================
-"        << ÅĞ¶Ï²Ù×÷ÏµÍ³ÊÇ Windows »¹ÊÇ Linux ºÍÅĞ¶ÏÊÇÖÕ¶Ë»¹ÊÇ Gvim >>
+"        << åˆ¤æ–­æ“ä½œç³»ç»Ÿæ˜¯ Windows è¿˜æ˜¯ Linux å’Œåˆ¤æ–­æ˜¯ç»ˆç«¯è¿˜æ˜¯ Gvim >>
 " =============================================================================
  
 " -----------------------------------------------------------------------------
-"  < ÅĞ¶Ï²Ù×÷ÏµÍ³ÊÇ·ñÊÇ Windows »¹ÊÇ Linux >
+"  < åˆ¤æ–­æ“ä½œç³»ç»Ÿæ˜¯å¦æ˜¯ Windows è¿˜æ˜¯ Linux >
 " -----------------------------------------------------------------------------
 let g:iswindows = 0
 let g:islinux = 0
@@ -14,7 +14,7 @@ else
 endif
  
 " -----------------------------------------------------------------------------
-"  < ÅĞ¶ÏÊÇÖÕ¶Ë»¹ÊÇ Gvim >
+"  < åˆ¤æ–­æ˜¯ç»ˆç«¯è¿˜æ˜¯ Gvim >
 " -----------------------------------------------------------------------------
 if has("gui_running")
     let g:isGUI = 1
@@ -50,23 +50,23 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-"ÎÒµÄ Bundle:
-Plugin 'https://github.com/kangxh/winmanager.git'
+"æˆ‘çš„ Bundle:
+Plugin 'https://github.com/kangxinghua/winmanager.git'
 Plugin 'bufexplorer.zip'
 Plugin 'The-NERD-tree'
-Plugin 'minibufexpl.vim'              " buffer²å¼ş
-Plugin 'molokai'                      " ÅäÉ«
-Plugin 'solarized'                    " ÅäÉ«
-Plugin 'obsidian'                     " ÅäÉ«
+Plugin 'minibufexpl.vim'              " bufferæ’ä»¶
+Plugin 'molokai'                      " é…è‰²
+Plugin 'solarized'                    " é…è‰²
+Plugin 'obsidian'                     " é…è‰²
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"»ù±¾ÉèÖÃ
+"åŸºæœ¬è®¾ç½®
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"½ûÖ¹Éú³É±¸·İÎÄ¼ş
+"ç¦æ­¢ç”Ÿæˆå¤‡ä»½æ–‡ä»¶
 set nobackup
 " Reload .ideavimrc
 nnoremap <leader>vs :source ~/.vimrc<CR>
@@ -76,23 +76,23 @@ set bs=2
 set directory=.,$TEMP
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ÏÔÊ¾Ïà¹Ø  
+" æ˜¾ç¤ºç›¸å…³  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"colorscheme desert  		" ÅäÉ«·½°¸
-colorscheme molokai            " ÅäÉ«·½°¸
-"colorscheme solarized          " ÅäÉ«·½°¸
-"colorscheme obsidian          	" ÅäÉ«·½°¸
+"colorscheme desert  		" é…è‰²æ–¹æ¡ˆ
+colorscheme molokai            " é…è‰²æ–¹æ¡ˆ
+"colorscheme solarized          " é…è‰²æ–¹æ¡ˆ
+"colorscheme obsidian          	" é…è‰²æ–¹æ¡ˆ
 if !(g:isGUI)
-	colorscheme desert  		" ÅäÉ«·½°¸
+	colorscheme desert  		" é…è‰²æ–¹æ¡ˆ
 	set t_Co=256
 endif
 
-" ¿ªÆôÓï·¨¸ßÁÁ¹¦ÄÜ
+" å¼€å¯è¯­æ³•é«˜äº®åŠŸèƒ½
 syntax enable
-" ÔÊĞíÓÃÖ¸¶¨Óï·¨¸ßÁÁÅäÉ«·½°¸Ìæ»»Ä¬ÈÏ·½°¸
+" å…è®¸ç”¨æŒ‡å®šè¯­æ³•é«˜äº®é…è‰²æ–¹æ¡ˆæ›¿æ¢é»˜è®¤æ–¹æ¡ˆ
 syntax on
 
-"ÖĞÎÄÂÒÂë
+"ä¸­æ–‡ä¹±ç 
 "set langmenu=zh_CN.utf8
 "set fileencodings=utf-8,cp936,big5,latin1
 "set ambiwidth=double
@@ -105,60 +105,60 @@ if g:iswindows
 else  
  	set fileencoding=utf-8  
 endif  
-"½â¾ö²Ëµ¥ÂÒÂë  
+"è§£å†³èœå•ä¹±ç   
 source $VIMRUNTIME/delmenu.vim  
 source $VIMRUNTIME/menu.vim  
-"½â¾öconsleÊä³öÂÒÂë  
+"è§£å†³consleè¾“å‡ºä¹±ç   
 language messages zh_CN.utf-8 
 
-"set number "ÏÔÊ¾ĞĞºÅ
+"set number "æ˜¾ç¤ºè¡Œå·
 set showmode
-set cul "¸ßÁÁ¹â±êËùÔÚĞĞ
-set cuc "¸ßÁÁ¹â±êËùÔÚÁĞ
+set cul "é«˜äº®å…‰æ ‡æ‰€åœ¨è¡Œ
+set cuc "é«˜äº®å…‰æ ‡æ‰€åœ¨åˆ—
 
-set laststatus=2    " Æô¶¯ÏÔÊ¾×´Ì¬ĞĞ(1),×ÜÊÇÏÔÊ¾×´Ì¬ĞĞ(2) 
-set showcmd  "ÊäÈëµÄÃüÁîÏÔÊ¾³öÀ´£¬linuxÏÂvimÓĞÓÃ  
+set laststatus=2    " å¯åŠ¨æ˜¾ç¤ºçŠ¶æ€è¡Œ(1),æ€»æ˜¯æ˜¾ç¤ºçŠ¶æ€è¡Œ(2) 
+set showcmd  "è¾“å…¥çš„å‘½ä»¤æ˜¾ç¤ºå‡ºæ¥ï¼Œlinuxä¸‹vimæœ‰ç”¨  
 
 
-"ËÑË÷Öğ×Ö·û¸ßÁÁ
-set hlsearch  "	'hls' 'hlsearch'	¸ßÁÁÏÔÊ¾ËùÓĞµÄÆ¥Åä¶ÌÓï
-set incsearch "  'is' 'incsearch'	²éÕÒ¶ÌÓïÊ±ÏÔÊ¾²¿·ÖÆ¥Åä
-set ignorecase smartcase " Èç¹ûÄã²ÉÓÃµÄÄ£Ê½ÀïÖÁÉÙÓĞÒ»¸ö´óĞ´×ÖÄ¸£¬²éÕÒ¾Í³ÉÁË´óĞ¡Ğ´Ãô¸ĞµÄ¡£
+"æœç´¢é€å­—ç¬¦é«˜äº®
+set hlsearch  "	'hls' 'hlsearch'	é«˜äº®æ˜¾ç¤ºæ‰€æœ‰çš„åŒ¹é…çŸ­è¯­
+set incsearch "  'is' 'incsearch'	æŸ¥æ‰¾çŸ­è¯­æ—¶æ˜¾ç¤ºéƒ¨åˆ†åŒ¹é…
+set ignorecase smartcase " å¦‚æœä½ é‡‡ç”¨çš„æ¨¡å¼é‡Œè‡³å°‘æœ‰ä¸€ä¸ªå¤§å†™å­—æ¯ï¼ŒæŸ¥æ‰¾å°±æˆäº†å¤§å°å†™æ•æ„Ÿçš„ã€‚
 
-"×´Ì¬ĞĞÏÔÊ¾µÄÄÚÈİ  
-" %(...%)     ¶¨ÒåÒ»¸öÏîÄ¿×é¡£
-" %{n}*     %¶ÔÆäÓàµÄĞĞÊ¹ÓÃ¸ßÁÁÏÔÊ¾×éUsern£¬Ö±µ½ÁíÒ»¸ö%n*¡£Êı×Ön±ØĞë´Ó1µ½9¡£ÓÃ%*»ò%0*¿ÉÒÔ»Ö¸´Õı³£µÄ¸ßÁÁÏÔÊ¾¡£
-" %&lt;     Èç¹û×´Ì¬ĞĞ¹ı³¤£¬ÔÚºÎ´¦»»ĞĞ¡£È±Ê¡ÊÇÔÚ¿ªÍ·¡£
-" %=     ×ó¶ÔÆëºÍÓÒ¶ÔÆëÏîÄ¿Ö®¼äµÄ·Ö¸îµã¡£
-" %     ×Ö·û%
-" %B     ¹â±êÏÂ×Ö·ûµÄÊ®Áù½øÖÆĞÎÊ½
-" %F     »º³åÇøµÄÎÄ¼şÍêÕûÂ·¾¶
-" %H     Èç¹ûÎª°ïÖú»º³åÇøÔòÏÔÊ¾ÎªHLP
-" %L     »º³åÇøÖĞµÄĞĞÊı
-" %M     Èç¹û»º³åÇøĞŞ¸Ä¹ıÔòÏÔÊ¾Îª+
-" %N     ´òÓ¡»úÒ³ºÅ
-" %O     ÒÔÊ®Áù½øÖÆ·½Ê½ÏÔÊ¾ÎÄ¼şÖĞµÄ×Ö·ûÆ«ÒÆ
-" %P     ÎÄ¼şÖĞ¹â±êÇ°µÄ%
-" %R     Èç¹û»º³åÇøÖ»¶ÁÔòÎªRO
-" %V     ÁĞÊı¡£Èç¹ûÓë%cÏàÍ¬ÔòÎª¿Õ×Ö·û´®
-" %W     Èç¹û´°¿ÚÎªÔ¤ÀÀ´°¿ÚÔòÎªPRV
-" %Y     »º³åÇøµÄÎÄ¼şÀàĞÍ£¬Èçvim
-" %a     Èç¹û±à¼­¶àĞĞÎÄ±¾£¬Õâ¸ö×ÖĞĞ´®¾ÍÊÇ({current} of {arguments})£¬ÀıÈç£º(5 of 18)¡£Èç¹ûÔÚÃüÁîĞĞÖĞÖ»ÓĞÒ»ĞĞ£¬Õâ¸ö×Ö·û´®Îª¿Õ
-" %b     ¹â±êÏÂµÄ×Ö·ûµÄÊ®½øÖÆ±íÊ¾ĞÎÊ½
-" %c     ÁĞºÅ
-" %f     »º³åÇøµÄÎÄ¼şÂ·¾¶
-" %h     Èç¹ûÎª°ïÖú»º³åÇøÏÔÊ¾Îª[Help]
-" %l     ĞĞºÅ
-" %m     Èç¹û»º³åÇøÒÑĞŞ¸ÄÔò±íÊ¾Îª[+]
-" %n     »º³åÇøºÅ
-" %o     ÔÚ¹â±êÇ°µÄ×Ö·ûÊı£¨°üÀ¨¹â±êÏÂµÄ×Ö·û£©
-" %p     ÎÄ¼şÖĞËùÔÚĞĞµÄ°Ù·Ö±È
-" %r     Èç¹û»º³åÇøÎªÖ»¶ÁÔò±íÊ¾Îª[RO]
-" %t     ÎÄ¼şÃû(ÎŞÂ·¾¶)
-" %v     ĞéÁĞºÅ
-" %w     Èç¹ûÎªÔ¤ÀÀ´°¿ÚÔòÏÔÊ¾Îª[Preview]
-" %y     »º³åÇøµÄÎÄ¼şÀàĞÍ£¬Èç[vim]
-" %{expr}     ±í´ïÊ½µÄ½á¹û
+"çŠ¶æ€è¡Œæ˜¾ç¤ºçš„å†…å®¹  
+" %(...%)     å®šä¹‰ä¸€ä¸ªé¡¹ç›®ç»„ã€‚
+" %{n}*     %å¯¹å…¶ä½™çš„è¡Œä½¿ç”¨é«˜äº®æ˜¾ç¤ºç»„Usernï¼Œç›´åˆ°å¦ä¸€ä¸ª%n*ã€‚æ•°å­—nå¿…é¡»ä»1åˆ°9ã€‚ç”¨%*æˆ–%0*å¯ä»¥æ¢å¤æ­£å¸¸çš„é«˜äº®æ˜¾ç¤ºã€‚
+" %&lt;     å¦‚æœçŠ¶æ€è¡Œè¿‡é•¿ï¼Œåœ¨ä½•å¤„æ¢è¡Œã€‚ç¼ºçœæ˜¯åœ¨å¼€å¤´ã€‚
+" %=     å·¦å¯¹é½å’Œå³å¯¹é½é¡¹ç›®ä¹‹é—´çš„åˆ†å‰²ç‚¹ã€‚
+" %     å­—ç¬¦%
+" %B     å…‰æ ‡ä¸‹å­—ç¬¦çš„åå…­è¿›åˆ¶å½¢å¼
+" %F     ç¼“å†²åŒºçš„æ–‡ä»¶å®Œæ•´è·¯å¾„
+" %H     å¦‚æœä¸ºå¸®åŠ©ç¼“å†²åŒºåˆ™æ˜¾ç¤ºä¸ºHLP
+" %L     ç¼“å†²åŒºä¸­çš„è¡Œæ•°
+" %M     å¦‚æœç¼“å†²åŒºä¿®æ”¹è¿‡åˆ™æ˜¾ç¤ºä¸º+
+" %N     æ‰“å°æœºé¡µå·
+" %O     ä»¥åå…­è¿›åˆ¶æ–¹å¼æ˜¾ç¤ºæ–‡ä»¶ä¸­çš„å­—ç¬¦åç§»
+" %P     æ–‡ä»¶ä¸­å…‰æ ‡å‰çš„%
+" %R     å¦‚æœç¼“å†²åŒºåªè¯»åˆ™ä¸ºRO
+" %V     åˆ—æ•°ã€‚å¦‚æœä¸%cç›¸åŒåˆ™ä¸ºç©ºå­—ç¬¦ä¸²
+" %W     å¦‚æœçª—å£ä¸ºé¢„è§ˆçª—å£åˆ™ä¸ºPRV
+" %Y     ç¼“å†²åŒºçš„æ–‡ä»¶ç±»å‹ï¼Œå¦‚vim
+" %a     å¦‚æœç¼–è¾‘å¤šè¡Œæ–‡æœ¬ï¼Œè¿™ä¸ªå­—è¡Œä¸²å°±æ˜¯({current} of {arguments})ï¼Œä¾‹å¦‚ï¼š(5 of 18)ã€‚å¦‚æœåœ¨å‘½ä»¤è¡Œä¸­åªæœ‰ä¸€è¡Œï¼Œè¿™ä¸ªå­—ç¬¦ä¸²ä¸ºç©º
+" %b     å…‰æ ‡ä¸‹çš„å­—ç¬¦çš„åè¿›åˆ¶è¡¨ç¤ºå½¢å¼
+" %c     åˆ—å·
+" %f     ç¼“å†²åŒºçš„æ–‡ä»¶è·¯å¾„
+" %h     å¦‚æœä¸ºå¸®åŠ©ç¼“å†²åŒºæ˜¾ç¤ºä¸º[Help]
+" %l     è¡Œå·
+" %m     å¦‚æœç¼“å†²åŒºå·²ä¿®æ”¹åˆ™è¡¨ç¤ºä¸º[+]
+" %n     ç¼“å†²åŒºå·
+" %o     åœ¨å…‰æ ‡å‰çš„å­—ç¬¦æ•°ï¼ˆåŒ…æ‹¬å…‰æ ‡ä¸‹çš„å­—ç¬¦ï¼‰
+" %p     æ–‡ä»¶ä¸­æ‰€åœ¨è¡Œçš„ç™¾åˆ†æ¯”
+" %r     å¦‚æœç¼“å†²åŒºä¸ºåªè¯»åˆ™è¡¨ç¤ºä¸º[RO]
+" %t     æ–‡ä»¶å(æ— è·¯å¾„)
+" %v     è™šåˆ—å·
+" %w     å¦‚æœä¸ºé¢„è§ˆçª—å£åˆ™æ˜¾ç¤ºä¸º[Preview]
+" %y     ç¼“å†²åŒºçš„æ–‡ä»¶ç±»å‹ï¼Œå¦‚[vim]
+" %{expr}     è¡¨è¾¾å¼çš„ç»“æœ
 
 " set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   
 
@@ -192,7 +192,7 @@ hi User8 guifg=#ffffff  guibg=#5b7fbb
 hi User9 guifg=#ffffff  guibg=#810085
 hi User0 guifg=#ffffff  guibg=#094afe
 
-" ÉèÖÃ×ÖÌå£¬ÅĞ¶ÏÏµÍ³ºÍ²ÎÊı
+" è®¾ç½®å­—ä½“ï¼Œåˆ¤æ–­ç³»ç»Ÿå’Œå‚æ•°
 if has("gui_gtk2")
     set guifont=DejaVu\ Sans\ Mono\ 12
 elseif has("gui_macvim")
@@ -201,7 +201,7 @@ elseif has("gui_win32")
     set guifont=Courier_New:h12:cANSI
 end
 
-" ´ò¿ªÎÄ¼şºó×î´ó»¯
+" æ‰“å¼€æ–‡ä»¶åæœ€å¤§åŒ–
 if g:iswindows  
 	au GUIEnter * simalt ~x
 else    
@@ -213,78 +213,78 @@ function! MaximizeWindow()
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"¼üÅÌÃüÁî
+"é”®ç›˜å‘½ä»¤
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ÔÚÄãµÄvimrcÎÄ¼şÖĞÔö¼ÓÏñÈçÏÂÕâÑù¸ñÊ½µÄkey bindings  
-" ¸ñÊ½Îª£º  
-" Ä£Ê½ <¿ì½İ¼ü> ÒªÖ´ĞĞµÄÃüÁî  
-" Ä£Ê½£º¿´ÏÂ±í£¬nmapÎªÆÕÍ¨Ä£Ê½,imapÎª±à¼­Ä£Ê½  
-" C±íÊ¾ctrl,A±íÊ¾Alt,S±íÊ¾Shift,<CR>±íÊ¾»Ø³µ,<Space>±íÊ¾¿Õ¸ñ,<leader>±íÊ¾|Õâ¸ö¼üÕâ¸ö
+" åœ¨ä½ çš„vimrcæ–‡ä»¶ä¸­å¢åŠ åƒå¦‚ä¸‹è¿™æ ·æ ¼å¼çš„key bindings  
+" æ ¼å¼ä¸ºï¼š  
+" æ¨¡å¼ <å¿«æ·é”®> è¦æ‰§è¡Œçš„å‘½ä»¤  
+" æ¨¡å¼ï¼šçœ‹ä¸‹è¡¨ï¼Œnmapä¸ºæ™®é€šæ¨¡å¼,imapä¸ºç¼–è¾‘æ¨¡å¼  
+" Cè¡¨ç¤ºctrl,Aè¡¨ç¤ºAlt,Sè¡¨ç¤ºShift,<CR>è¡¨ç¤ºå›è½¦,<Space>è¡¨ç¤ºç©ºæ ¼,<leader>è¡¨ç¤º|è¿™ä¸ªé”®è¿™ä¸ª
 " 
-" ±ÈÈçÏÂÃæÕâĞĞ±íÊ¾ÔÚ¡°Õı³£||¿ÉÊÓ»¯||ÔËËã¡±Ä£Ê½ÏÂ£¬°´ÏÂCtrl+W,ÔòÖ´ĞĞÃüÁî¡°:tabclose²¢»Ø³µ¡±£¬¾ÍÊÇ¹Ø±Õµ±Ç°±êÇ©Ò³  
+" æ¯”å¦‚ä¸‹é¢è¿™è¡Œè¡¨ç¤ºåœ¨â€œæ­£å¸¸||å¯è§†åŒ–||è¿ç®—â€æ¨¡å¼ä¸‹ï¼ŒæŒ‰ä¸‹Ctrl+W,åˆ™æ‰§è¡Œå‘½ä»¤â€œ:tabcloseå¹¶å›è½¦â€ï¼Œå°±æ˜¯å…³é—­å½“å‰æ ‡ç­¾é¡µ  
 " map <C-w> :tabclose<CR>  
 "   
-" ÓÖ±ÈÈçÕâĞĞ±íÊ¾ÔÚ¡°Õı³£Ä£Ê½¡±ÏÂ£¬°´ÏÂCtrl+t,  
-" ÔòÒÀ´ÎÖ´ĞĞ:browse(´ò¿ªÑ¡ÔñÎÄ¼ş¶Ô»°¿ò£© tabnew½«Ñ¡¶¨µÄÎÄ¼şÔÚĞÂ±êÇ©Ò³ÖĞ´ò¿ª  
+" åˆæ¯”å¦‚è¿™è¡Œè¡¨ç¤ºåœ¨â€œæ­£å¸¸æ¨¡å¼â€ä¸‹ï¼ŒæŒ‰ä¸‹Ctrl+t,  
+" åˆ™ä¾æ¬¡æ‰§è¡Œ:browse(æ‰“å¼€é€‰æ‹©æ–‡ä»¶å¯¹è¯æ¡†ï¼‰ tabnewå°†é€‰å®šçš„æ–‡ä»¶åœ¨æ–°æ ‡ç­¾é¡µä¸­æ‰“å¼€  
 " nmap <C-t> :browse tabnew<CR>  
 "   
 "   
-" ÏÂÃæÕâĞĞºÍÉÏÃæÒ»Ñù£¬Ö»ÊÇÏÈÓÃEsc´Ó±à¼­Ä£Ê½ÇĞ»»µ½Õı³£Ä£Ê½  
+" ä¸‹é¢è¿™è¡Œå’Œä¸Šé¢ä¸€æ ·ï¼Œåªæ˜¯å…ˆç”¨Escä»ç¼–è¾‘æ¨¡å¼åˆ‡æ¢åˆ°æ­£å¸¸æ¨¡å¼  
 " imap <C-t> <Esc>:browse tabnew<CR>  
 "
-""ÔÚÒ»¸öÓ³Éäºó²»ÄÜÖ±½Ó¼Ó×¢ÊÍ£¬ÒòÎª " ×Ö·ûÒ²±»µ±×÷ÊÇÓ³ÉäµÄÒ»²¿·Ö¡£Äã¿ÉÒÔÓÃ |" ÈÆ
-"¹ıÕâÒ»ÏŞÖÆ¡£ÕâÊµ¼ÊÉÏÊÇ¿ªÊ¼Ò»¸öĞÂµÄ¿ÕÃüÁî¡£ÀıÈç:  
+""åœ¨ä¸€ä¸ªæ˜ å°„åä¸èƒ½ç›´æ¥åŠ æ³¨é‡Šï¼Œå› ä¸º " å­—ç¬¦ä¹Ÿè¢«å½“ä½œæ˜¯æ˜ å°„çš„ä¸€éƒ¨åˆ†ã€‚ä½ å¯ä»¥ç”¨ |" ç»•
+"è¿‡è¿™ä¸€é™åˆ¶ã€‚è¿™å®é™…ä¸Šæ˜¯å¼€å§‹ä¸€ä¸ªæ–°çš„ç©ºå‘½ä»¤ã€‚ä¾‹å¦‚:  
 "
 "	:map <Space> W|     " Use spacebar to move forward a word
 
-" Ctrl+c ¸´ÖÆ
+" Ctrl+c å¤åˆ¶
 vnoremap <C-c> "+y 
 " Ctrl+x     
 vnoremap <C-x> "+d
-" Ctrl+v Õ³Ìù
+" Ctrl+v ç²˜è´´
 noremap <C-v> "+p
 inoremap <C-v> <Esc>"+pa
 cnoremap <C-v> <C-r>+
-" Ctrl+s ±£´æ
+" Ctrl+s ä¿å­˜
 noremap <C-s> <Esc>:w<CR>
 inoremap <C-s> <Esc>:w<CR>a
-"ÅĞ¶ÏÊÇ·ñÊÇgui,ÖÕ¶ËÕâĞ©ÃüÁî²»Ö§³Ö,³ı·Ç stty È¥³ıµôÖÕ¶ËµÄÃüÁî
+"åˆ¤æ–­æ˜¯å¦æ˜¯gui,ç»ˆç«¯è¿™äº›å‘½ä»¤ä¸æ”¯æŒ,é™¤é stty å»é™¤æ‰ç»ˆç«¯çš„å‘½ä»¤
 if !(g:isGUI)
-	" Ctrl+c ¸´ÖÆ
+	" Ctrl+c å¤åˆ¶
 	unmap <C-c>
 	" Ctrl+x     
 	unmap <C-x>
-	" Ctrl+v Õ³Ìù
+	" Ctrl+v ç²˜è´´
 	unmap <C-v>
-	" Ctrl+s ±£´æ
+	" Ctrl+s ä¿å­˜
 	unmap <C-s>
 endif
 
-" Ctrl+d ¸´ÖÆµ±Ç°ĞĞ
+" Ctrl+d å¤åˆ¶å½“å‰è¡Œ
 noremap <C-d> yyp
 inoremap <C-d> <Esc>yypa
 vnoremap <C-d> ykp
-" È«Ñ¡
+" å…¨é€‰
 noremap <C-a> <Esc>ggVG
 inoremap <C-a> <Esc>ggVGa
-"ctrl+z³·Ïú
+"ctrl+zæ’¤é”€
 noremap <C-z> u
 inoremap <C-z> <Esc>u
-" Shift ÖØ×ö [count] ´Î±»³·ÏúµÄ¸ü¸Ä¡£
+" Shift é‡åš [count] æ¬¡è¢«æ’¤é”€çš„æ›´æ”¹ã€‚
 noremap <S-z>  <Esc><C-r>
 inoremap <S-z> <Esc><C-r>a
-"Ìæ»»×Ö·û´®
+"æ›¿æ¢å­—ç¬¦ä¸²
 noremap <C-r> <Esc>:%s/
 vnoremap <C-r> "+y<Esc>:%s/<C-r>"
-" Alt+= °Ñµ±Ç°¹â±êÖ®ÉÏ»òÖ®ºóµÄÊıÖµ»òÕß×ÖÄ¸¼ÓÉÏ [count]¡£
+" Alt+= æŠŠå½“å‰å…‰æ ‡ä¹‹ä¸Šæˆ–ä¹‹åçš„æ•°å€¼æˆ–è€…å­—æ¯åŠ ä¸Š [count]ã€‚
 noremap <A-=> <C-a>
 inoremap <A-=> <Esc><C-a>a
-" Alt+- °Ñµ±Ç°¹â±êÖ®ÉÏ»òÖ®ºóµÄÊıÖµ»òÕß×ÖÄ¸¼õÈ¥ [count]¡£
+" Alt+- æŠŠå½“å‰å…‰æ ‡ä¹‹ä¸Šæˆ–ä¹‹åçš„æ•°å€¼æˆ–è€…å­—æ¯å‡å» [count]ã€‚
 noremap <A--> <C-x>
 inoremap <A--> <Esc><C-x>a
 " clear the search buffer when hitting return
 nnoremap <leader>/ <Esc>:nohlsearch<CR>
-" ÊÓÍ¼Ä£Ê½Ê±,²éÑ¯¸´ÖÆµ±Ç°Ñ¡ÖĞ,·½±ã²éÑ¯
+" è§†å›¾æ¨¡å¼æ—¶,æŸ¥è¯¢å¤åˆ¶å½“å‰é€‰ä¸­,æ–¹ä¾¿æŸ¥è¯¢
 vnoremap <C-f> "+y<Esc>/<C-r>"
 noremap <C-f> <Esc>/
 
@@ -295,7 +295,7 @@ noremap <C-f> <Esc>/
 " Config Winmanager
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:winManagerWindowLayout='NERDTree|BufExplorer'
-"ÉèÖÃwinmanagerµÄ¿í¶È£¬Ä¬ÈÏÎª25
+"è®¾ç½®winmanagerçš„å®½åº¦ï¼Œé»˜è®¤ä¸º25
 let g:winManagerWidth = 50
 
 nmap <leader>m :WMToggle<CR>
@@ -312,43 +312,43 @@ endfunction
 " NERDTree 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Usage
-"ÊäÈë :NERDTree ´ò¿ª NERDTree ´°¿Ú
-"³£ÓÃ¿ì½İ¼ü£º
-" o ´ò¿ª/¹Ø±Õ¹â±êËùÔÚÄ¿Â¼
-" t ÔÚĞÂ tab ÖĞ´ò¿ªÎÄ¼ş£¬²¢Ìø×ªµ½¸Ã tab
-" T ÔÚĞÂ tab ÖĞ´ò¿ªÎÄ¼ş£¬²¢²»Ìø×ªµ½¸Ã tab
-" p Ìø×ªµ½¸¸½Úµã
-" P Ìø×ªµ½¸ù½Úµã
-" q ¹Ø±Õ NERDTree ´°¿Ú
+"è¾“å…¥ :NERDTree æ‰“å¼€ NERDTree çª—å£
+"å¸¸ç”¨å¿«æ·é”®ï¼š
+" o æ‰“å¼€/å…³é—­å…‰æ ‡æ‰€åœ¨ç›®å½•
+" t åœ¨æ–° tab ä¸­æ‰“å¼€æ–‡ä»¶ï¼Œå¹¶è·³è½¬åˆ°è¯¥ tab
+" T åœ¨æ–° tab ä¸­æ‰“å¼€æ–‡ä»¶ï¼Œå¹¶ä¸è·³è½¬åˆ°è¯¥ tab
+" p è·³è½¬åˆ°çˆ¶èŠ‚ç‚¹
+" P è·³è½¬åˆ°æ ¹èŠ‚ç‚¹
+" q å…³é—­ NERDTree çª—å£
 let g:NERDTree_title="[NERDTree]"
-let NERDChristmasTree=1										" ÀàËÆÊ¥µ®Ê÷µÄÏÔÊ¾·½Ê½
-let NERDTreeAutoCenter=1									" ¿ØÖÆµ±¹â±êÒÆ¶¯³¬¹ıÒ»¶¨¾àÀëÊ±£¬ÊÇ·ñ×Ô¶¯½«½¹µãµ÷Õûµ½ÆÁÖĞĞÄ
-"let NERDTreeBookmarksFile=$VIMFILES.'\NERDTree_bookmarks'	" Ö¸¶¨ÊéÇ©ÎÄ¼ş
-let NERDTreeMouseMode=2										" Ö¸¶¨Êó±êÄ£Ê½(1.Ë«»÷´ò¿ª 2.µ¥Ä¿Â¼Ë«ÎÄ¼ş 3.µ¥»÷´ò¿ª)
-let NERDTreeShowBookmarks=1									" ÊÇ·ñÄ¬ÈÏÏÔÊ¾ÊéÇ©ÁĞ±í
-let NERDTreeShowFiles=1										" ÊÇ·ñÄ¬ÈÏÏÔÊ¾ÎÄ¼ş
-let NERDTreeShowHidden=0									" ÊÇ·ñÄ¬ÈÏÏÔÊ¾Òş²ØÎÄ¼ş
-let NERDTreeShowLineNumbers=0								" ÊÇ·ñÄ¬ÈÏÏÔÊ¾ĞĞºÅ
-let NERDTreeWinPos='left'									" ´°¿ÚÎ»ÖÃ£¨'left' or 'right'£©
-let NERDTreeWinSize=24										" ´°¿Ú¿í¶È
-"let NERDTreeQuitOnOpen=1									" µ±Í¨¹ıNERD Tree´ò¿ªÎÄ¼ş×Ô¶¯ÍË³öNERDTree½çÃæ
-"nnoremap <Leader>nt :NERDTree<CR>		" <Leader> + nt	->´ò¿ªNERDTree½çÃæ
-"nmap <silent> <F3> :NERDTree<CR>		" <Leader> + nt	->´ò¿ªNERDTree½çÃæ
+let NERDChristmasTree=1										" ç±»ä¼¼åœ£è¯æ ‘çš„æ˜¾ç¤ºæ–¹å¼
+let NERDTreeAutoCenter=1									" æ§åˆ¶å½“å…‰æ ‡ç§»åŠ¨è¶…è¿‡ä¸€å®šè·ç¦»æ—¶ï¼Œæ˜¯å¦è‡ªåŠ¨å°†ç„¦ç‚¹è°ƒæ•´åˆ°å±ä¸­å¿ƒ
+"let NERDTreeBookmarksFile=$VIMFILES.'\NERDTree_bookmarks'	" æŒ‡å®šä¹¦ç­¾æ–‡ä»¶
+let NERDTreeMouseMode=2										" æŒ‡å®šé¼ æ ‡æ¨¡å¼(1.åŒå‡»æ‰“å¼€ 2.å•ç›®å½•åŒæ–‡ä»¶ 3.å•å‡»æ‰“å¼€)
+let NERDTreeShowBookmarks=1									" æ˜¯å¦é»˜è®¤æ˜¾ç¤ºä¹¦ç­¾åˆ—è¡¨
+let NERDTreeShowFiles=1										" æ˜¯å¦é»˜è®¤æ˜¾ç¤ºæ–‡ä»¶
+let NERDTreeShowHidden=0									" æ˜¯å¦é»˜è®¤æ˜¾ç¤ºéšè—æ–‡ä»¶
+let NERDTreeShowLineNumbers=0								" æ˜¯å¦é»˜è®¤æ˜¾ç¤ºè¡Œå·
+let NERDTreeWinPos='left'									" çª—å£ä½ç½®ï¼ˆ'left' or 'right'ï¼‰
+let NERDTreeWinSize=24										" çª—å£å®½åº¦
+"let NERDTreeQuitOnOpen=1									" å½“é€šè¿‡NERD Treeæ‰“å¼€æ–‡ä»¶è‡ªåŠ¨é€€å‡ºNERDTreeç•Œé¢
+"nnoremap <Leader>nt :NERDTree<CR>		" <Leader> + nt	->æ‰“å¼€NERDTreeç•Œé¢
+"nmap <silent> <F3> :NERDTree<CR>		" <Leader> + nt	->æ‰“å¼€NERDTreeç•Œé¢
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " minibuffexploer
 """"""""""""""""""""""""""""""""""""""""""""""""""
-let g:miniBufExplMapWindowNavVim = 1   "<C-h,j,k,l>ÇĞ»»µ½ÉÏÏÂ×óÓÒµÄ´°¿ÚÖĞÈ¥
-let g:miniBufExplMapWindowNavArrows = 1  "<C-¼ıÍ·>¼ıÍ·ÇĞ»»
-"let g:miniBufExplMapCTabSwitchBufs = 1   "<C-Tab>ÇĞ»»´°¿Ú(ÓĞ³åÍ»)
+let g:miniBufExplMapWindowNavVim = 1   "<C-h,j,k,l>åˆ‡æ¢åˆ°ä¸Šä¸‹å·¦å³çš„çª—å£ä¸­å»
+let g:miniBufExplMapWindowNavArrows = 1  "<C-ç®­å¤´>ç®­å¤´åˆ‡æ¢
+"let g:miniBufExplMapCTabSwitchBufs = 1   "<C-Tab>åˆ‡æ¢çª—å£(æœ‰å†²çª)
 "let g:miniBufExplModSelTarget = 1  
 let g:miniBufExplMoreThanOne=0
-"³£ÓÃ²Ù×÷
-" :e <filename> ´ò¿ªÎÄ¼ş
-" :ls    µ±Ç°´ò¿ªµÄbuf
-" :bn    ÏÂÒ»¸öbuf
-" :bp    Ç°Ò»¸öbuf
-" :b<n>    nÊÇÊı×Ö£¬µÚn¸öbuf
-" :b<tab>    ×Ô¶¯²¹Æë
-" :bd    É¾³ı
+"å¸¸ç”¨æ“ä½œ
+" :e <filename> æ‰“å¼€æ–‡ä»¶
+" :ls    å½“å‰æ‰“å¼€çš„buf
+" :bn    ä¸‹ä¸€ä¸ªbuf
+" :bp    å‰ä¸€ä¸ªbuf
+" :b<n>    næ˜¯æ•°å­—ï¼Œç¬¬nä¸ªbuf
+" :b<tab>    è‡ªåŠ¨è¡¥é½
+" :bd    åˆ é™¤
 """"""""""""""""""""""""""""""""""""""""""""""""""
