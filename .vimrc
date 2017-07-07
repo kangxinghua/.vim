@@ -249,6 +249,7 @@ endfunction
 vnoremap <C-c> "+y 
 " Ctrl+x     
 vnoremap <C-x> "+d
+noremap <C-x> dd
 " Ctrl+v 粘贴
 noremap <C-v> "+p
 inoremap <C-v> <Esc>"+pa
